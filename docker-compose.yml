@@ -1,0 +1,68 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: secret_santa
+      POSTGRES_PASSWORD: secret_santa
+      POSTGRES_DB: secret_santa
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    restart: unless-stopped
+    ports:
+      - '8025:8025'
+
+  backend:
+    build:
+      context: .
+      dockerfile: infrastructure/backend.Dockerfile
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - backend/.env.example
+    volumes:
+      - ./backend:/app
+    ports:
+      - '8000:8000'
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  worker:
+    build:
+      context: .
+      dockerfile: infrastructure/worker.Dockerfile
+    depends_on:
+      - redis
+    env_file:
+      - backend/.env.example
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: sh -c "npm install && npm run dev -- --host"
+    ports:
+      - '5173:5173'
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
