@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Virtual environments
+.env
+.venv/
+
+# Alembic
+backend/alembic/versions/*.pyc
+
+# Docker
+*.log
+
+# macOS
+.DS_Store

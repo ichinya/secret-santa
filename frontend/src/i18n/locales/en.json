@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Organize unforgettable Secret Santa events",
+    "subtitle": "Create boxes, invite friends, and celebrate kindness all year long."
+  },
+  "actions": {
+    "createBox": "Create a box",
+    "quickDraw": "Quick draw"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "steps": [
+      "Create a box with limits and wishes",
+      "Invite participants via email or link",
+      "Lock cards and run the draw",
+      "Surprise your giftee with the perfect gift"
+    ]
+  }
+}
