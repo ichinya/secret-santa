@@ -175,4 +175,25 @@ infrastructure/
 2. Box CRUD & participant invitations
 3. Draw execution logic with auditing
 4. Email service integration (SendGrid API wrappers)
-```
+
+## Planned domain extensions
+
+The initial schema is intentionally smaller than the full product model. Add these entities through focused migrations as their workstreams start:
+
+- `draw_exclusions` and immutable `draw_revisions` with algorithm/constraint snapshots;
+- `wishlist_items` and gift/delivery status history;
+- `anonymous_messages` with moderation and retention metadata;
+- `notifications` and provider delivery events;
+- `event_templates` and repeat-history links;
+- `audit_events`, `consent_records`, and deletion/scrubbing jobs.
+
+Do not store advanced settings in one unvalidated JSON blob when they affect authorization, draw correctness, money, or retention. Promote those values to typed columns or versioned schemas.
+
+## Related specifications
+
+- [Product specification](product-spec.md)
+- [UX and visual design](ui-mockups.md)
+- [Draw engine](draw-engine.md)
+- [Security and personal data](security-privacy.md)
+- [Delivery roadmap](roadmap.md)
+- [Product decisions](decisions.md)
