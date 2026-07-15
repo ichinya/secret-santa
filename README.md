@@ -18,4 +18,5 @@ Refer to [docs/setup.md](docs/setup.md) for local environment instructions.
 - [Security and personal data](docs/security-privacy.md)
 - [Delivery roadmap](docs/roadmap.md)
 - [Product decisions](docs/decisions.md)
+- [AI development brief](docs/ai-development-brief.md)
 - [Reference-site page audit](docs/research/santa-secret-page-audit.md)

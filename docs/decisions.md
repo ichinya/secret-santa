@@ -1,6 +1,6 @@
 # Product decisions
 
-This register records decisions established by the current repository and the Chat 68 product research. Unresolved items stay explicit instead of becoming accidental implementation choices.
+This register records decisions established by the current repository and the Chat 68/71 product research. Unresolved items stay explicit instead of becoming accidental implementation choices.
 
 ## Accepted decisions
 
@@ -63,6 +63,18 @@ This register records decisions established by the current repository and the Ch
 **Decision:** The `santa-secret.ru` page audit informs information architecture and expected states. Do not copy its name, copywriting, illustrations, icons, or visual composition.
 
 **Reason:** The new service needs an independent brand and implementation.
+
+### D-011: Keep AI implementation briefs subordinate to canonical docs
+
+**Decision:** An AI coding agent follows the selected issue, product specification, decision register, security rules, architecture, UX specification, and roadmap in that order. The reusable agent brief cannot select a replacement framework or silently resolve an open decision.
+
+**Reason:** The Chat 71 prompt offered multiple backend stacks because it was written before inspecting the repository. The current FastAPI and React monorepo is already an accepted implementation baseline.
+
+### D-012: Make administration a narrow audited operations surface
+
+**Decision:** The admin console exposes support, email delivery, privacy jobs, moderation, incidents, provider health, and audit queues. It is not a general database browser. Sensitive content or assignment access requires a reason, step-up authentication, a time-limited break-glass grant, and an audit event.
+
+**Reason:** Operational support is required, but unrestricted access would violate field-level privacy and turn administrator convenience into a systemic disclosure risk.
 
 ## Open decisions
 

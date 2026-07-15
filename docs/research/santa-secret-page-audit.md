@@ -2,7 +2,9 @@
 
 ## Scope
 
-This document records a manual browser audit of `santa-secret.ru` performed in October 2025 during Chat 68. It captures expected Secret Santa workflows and page states for product planning.
+This document records a manual browser audit of `santa-secret.ru` performed in October 2025 during Chat 68 and repeated as the page inventory in Chat 71. It captures expected Secret Santa workflows and page states for product planning.
+
+Chat 71 uploaded another attachment named `6193f43f.md` with the same 12,529-byte size and 3,363-token index metadata as the Chat 68 brief. The export assigns a different file ID, so this is recorded as a repeated source artifact rather than an independent specification. Chat 71's unique output is preserved in [the AI development brief](../ai-development-brief.md).
 
 The audit is a point-in-time observation, not a current availability check. No screenshots or transferable design assets survived in the export. The reference site's branding, copy, illustrations, icons, and layout must not be copied.
 

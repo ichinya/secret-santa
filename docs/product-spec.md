@@ -53,6 +53,8 @@ Related documents:
 ### Administrator
 
 - handle abuse, delivery failures, user deletion, and support requests;
+- inspect provider/background-job health and retry explicitly allowed operations;
+- work through dedicated support, moderation, privacy, email, and incident queues;
 - cannot casually browse assignment or address data; privileged access is audited.
 
 ## 4. Core domain
@@ -224,7 +226,8 @@ The exact OpenAPI schema is maintained in code. The product requires these resou
 - `/boxes/{id}/participants`, `/invitations`, `/invitations/{token}`;
 - `/boxes/{id}/draw/validate`, `/boxes/{id}/draw`, `/assignments/me`;
 - `/boxes/{id}/exclusions`, `/wishlist-items`, `/anonymous-messages`;
-- `/notifications`, `/email/resend`, `/support`, `/consents`, `/account/deletion`.
+- `/notifications`, `/email/resend`, `/support`, `/consents`, `/account/deletion`;
+- `/admin/support-cases`, `/admin/email-events`, `/admin/privacy-jobs`, `/admin/incidents`, `/admin/moderation-cases`, `/admin/audit-events`.
 
 Mutation endpoints that send mail, run a draw, archive, delete, or redraw must accept an idempotency key.
 
@@ -274,4 +277,4 @@ These experiments are not MVP commitments and require separate privacy, moderati
 
 ## 11. Source and provenance
 
-This specification consolidates the product brief uploaded in Chat 68 (`6193f43f.md`, 12,529 UTF-8 bytes) and a manual page audit of `santa-secret.ru` performed in October 2025. The reference service is used to identify expected workflows, not as a source of branding, copy, artwork, or implementation.
+This specification consolidates the product brief uploaded in Chat 68 (`6193f43f.md`, 12,529 UTF-8 bytes) and the manual page audit of `santa-secret.ru` performed in October 2025. Chat 71 (`Разработка сайта Тайный Санта`) repeated the same attachment metadata and page inventory, then produced the reusable [AI development brief](ai-development-brief.md). The reference service is used to identify expected workflows, not as a source of branding, copy, artwork, or implementation.

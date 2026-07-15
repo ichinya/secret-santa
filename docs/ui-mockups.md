@@ -169,6 +169,20 @@ The header contains:
 - Revealed state shows wishes, wishlist, allowed contact/delivery information, budget, and anonymous message command.
 - Gift status is a segmented control or menu, not free text.
 
+## Administrative operations
+
+The admin surface is separate from participant and organizer navigation. It is a compact operational workspace, not a public dashboard or a collection of decorative cards.
+
+- Primary navigation: `Support`, `Email delivery`, `Privacy jobs`, `Incidents`, `Moderation`, `System health`, and `Audit`.
+- Queue tables show case ID, safe subject identifier, state, severity, age, owner, last event, and next allowed action.
+- Filters, search, saved views, and bulk actions appear in a stable toolbar; bulk actions are limited to non-sensitive reversible operations.
+- A details pane shows the event timeline and redacted diagnostics without opening another card inside the queue surface.
+- Sensitive fields are absent by default. A reveal action names the field, purpose, time limit, and audit consequence before step-up authentication.
+- Assignment mappings and private messages cannot appear in list rows, notification previews, exports, or global search results.
+- Retry, revoke, unlock, suppress, export, delete, and break-glass commands have distinct confirmations and idempotent progress states.
+- Mobile views preserve triage and single-case handling; large comparison tables use controlled horizontal scrolling rather than shrinking text.
+- Empty, loading, stale-data, provider-down, permission-denied, escalation, and completed states are designed explicitly.
+
 ## Component inventory
 
 - buttons: primary, secondary, danger, icon, loading, disabled;

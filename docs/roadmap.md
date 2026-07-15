@@ -71,16 +71,26 @@ Most UI is static and the backend currently exposes only root/health behavior. T
 
 **Done when:** the production checklist in [security-privacy.md](security-privacy.md) has evidence and owners.
 
+### WS-07 Administrative operations and moderation
+
+- role-gated admin entry with step-up authentication;
+- queues for support, email delivery, privacy jobs, box/draw incidents, and moderation;
+- provider/background-job health with safe diagnostics and explicit retry actions;
+- read-only audit lookup and time-limited break-glass access with a required reason;
+- confirmed, idempotent, and audited mutations instead of direct database editing.
+
+**Done when:** an authorized operator can resolve a bounced invitation, failed deletion/export, account incident, or abuse report without unrestricted access to assignments, addresses, wishes, or private messages.
+
 ## Milestone 2: Rich exchange
 
-### WS-07 Wishlist and gift workflow
+### WS-08 Wishlist and gift workflow
 
 - structured wishlist items, priorities, price ranges, and links;
 - reservation without revealing Santa;
 - choosing/purchased/sent/delivered states;
 - reminders tied to event deadlines.
 
-### WS-08 Advanced rules and history
+### WS-09 Advanced rules and history
 
 - explicit pair and household exclusions;
 - reciprocal-pair setting;
@@ -88,7 +98,7 @@ Most UI is static and the backend currently exposes only root/health behavior. T
 - manual locked pairs with solver validation;
 - actionable impossible-constraint diagnostics.
 
-### WS-09 Anonymous communication
+### WS-10 Anonymous communication
 
 - Santa-to-recipient thread without identity disclosure;
 - rate limits, report/block, moderation case, and retention;
